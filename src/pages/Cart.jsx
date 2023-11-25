@@ -35,13 +35,13 @@ export default function Cart(props) {
           ))}
         </div>
 
-        <div className="col-sm-3 p-1">
+        <div className="col-sm-3 p-1 mb-5">
           <div className="card">
             <div className="card-body">
-              {/* Toplam fiyat */}
               <h5 className="card-title">Total Amount</h5>
               <h4>{totalAmount} €</h4>
             </div>
+            <button className="btn btn-primary">Pay</button>
           </div>
         </div>
       </div>
