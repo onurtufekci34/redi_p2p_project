@@ -174,7 +174,7 @@ function App() {
         updatedCart.push({ id: productId, quantity: quantity, product: productToAdd });
       }
 
-      alertify.success(productToAdd.title + "added")
+      alertify.success(productToAdd.title + " added to cart")
       //setAlertMessage(`${productToAdd.title} added to cart` );
       return updatedCart;
     });
