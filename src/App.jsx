@@ -1,5 +1,8 @@
 import {useState,useEffect} from 'react'
-import Alert from './components/Alert'; 
+//import Alert from './components/Alert'; 
+import alertify from 'alertifyjs';
+import 'alertifyjs/build/css/alertify.css';
+
 
 import {
   Route,
@@ -157,7 +160,7 @@ function App() {
 
  
   const addToCart = (productId, quantity) => {
-    setAlertMessage('Product added to cart!');
+   
    
 
 
@@ -170,6 +173,9 @@ function App() {
       } else {
         updatedCart.push({ id: productId, quantity: quantity, product: productToAdd });
       }
+
+      alertify.success(productToAdd.title + "added")
+      //setAlertMessage(`${productToAdd.title} added to cart` );
       return updatedCart;
     });
   };
@@ -200,10 +206,9 @@ function App() {
   );
 
   return (
-    <div>
-      <Alert message={alertMessage} /> {/* Alert bileşenini burada ekleyin */}
+    
       <RouterProvider router={router} />
-    </div>
+    
   );
 }
 
