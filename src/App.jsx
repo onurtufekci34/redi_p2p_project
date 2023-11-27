@@ -1,4 +1,5 @@
 import {useState,useEffect} from 'react'
+import Alert from './components/Alert'; 
 
 import {
   Route,
@@ -152,11 +153,14 @@ const initialProducts = [
 function App() {
 
   const [cart, setCart] = useState([]);
-
+  const [alertMessage, setAlertMessage] = useState('');
 
  
   const addToCart = (productId, quantity) => {
-    // Sepete ürün ekleme işlemi
+    setAlertMessage('Product added to cart!');
+   
+
+
     const productToAdd = initialProducts.find((product) => product.id === productId);
     setCart((prevCart) => {
       const updatedCart = [...prevCart];
@@ -195,7 +199,12 @@ function App() {
     )
   );
 
-  return <RouterProvider router={router} />;
+  return (
+    <div>
+      <Alert message={alertMessage} /> {/* Alert bileşenini burada ekleyin */}
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
 export default App
