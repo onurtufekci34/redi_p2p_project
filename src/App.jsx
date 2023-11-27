@@ -1,5 +1,4 @@
-import {useState,useEffect} from 'react'
-//import Alert from './components/Alert'; 
+import {useState} from 'react'
 import alertify from 'alertifyjs';
 import 'alertifyjs/build/css/alertify.css';
 
@@ -156,14 +155,10 @@ const initialProducts = [
 function App() {
 
   const [cart, setCart] = useState([]);
-  const [alertMessage, setAlertMessage] = useState('');
+ 
 
  
-  const addToCart = (productId, quantity) => {
-   
-   
-
-
+  const addToCart = (productId, quantity) => {   
     const productToAdd = initialProducts.find((product) => product.id === productId);
     setCart((prevCart) => {
       const updatedCart = [...prevCart];
@@ -175,7 +170,6 @@ function App() {
       }
 
       alertify.success(productToAdd.title + " added to cart")
-      //setAlertMessage(`${productToAdd.title} added to cart` );
       return updatedCart;
     });
   };
@@ -184,12 +178,9 @@ function App() {
     return total + item.quantity;
   }, 0);
 
-  console.log("Total Quantity:", totalQuantity);
+  
 
-  useEffect(() => {
-    console.log("Cart Content:", cart);
-    
-  }, [cart]);
+
   
  
   

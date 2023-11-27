@@ -19,7 +19,7 @@ export default function Subscription() {
    
 
   return (
-    <div className="formContainer">
+    <div className="formSubscription">
     {!submittedEmail ? (
       <form onSubmit={handleSubmit}>
         <label>
