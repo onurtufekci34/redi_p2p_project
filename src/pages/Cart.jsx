@@ -42,7 +42,7 @@ export default function Cart(props) {
           ))}
         </div>
 
-        <div className="col-sm-3 p-1 mb-5">
+        {totalAmount === 0 ? <h1 className="text-center">Your Cart is empty</h1> :<div className="col-sm-3 p-1 mb-5">
           <div className="card">
             <div className="card-body">
               <h5 className="card-title">Total Amount</h5>
@@ -50,7 +50,7 @@ export default function Cart(props) {
             </div>
             <button className="btn btn-primary">Pay</button>
           </div>
-        </div>
+        </div>}
       </div>
     </div>
   );
