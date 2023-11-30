@@ -22,6 +22,7 @@ npm run dev
 
 ## Project Structure
 ```   
+data/: db.json 
 src/: Source code of the project
 pages/: Page components
 layouts/: Page layouts
