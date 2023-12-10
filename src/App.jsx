@@ -16,6 +16,7 @@ import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 
 import RootLayout from "./layouts/RootLayout";
+import ProduktDashboard from "./pages/ProduktDashboard";
 
 const initialProducts = [
   {
@@ -27,10 +28,7 @@ const initialProducts = [
     category: "gaming",
     image:
       "https://www.alternate.de/p/o/1/3/ASUS_TUF_Gaming_F17__FX706HM_HX004W___Gaming_Notebook@@100003431.jpg",
-    rating: {
-      rate: 3.9,
-      count: 120,
-    },
+    
   },
   {
     id: 1,
@@ -41,10 +39,7 @@ const initialProducts = [
     category: "gaming",
     image:
       "https://www.alternate.de/p/o/8/1/Lenovo_IdeaPad_5_Pro_16ARH7__82SN007SGE___Notebook@@1864218.jpg",
-    rating: {
-      rate: 4.1,
-      count: 259,
-    },
+   
   },
   {
     id: 2,
@@ -55,10 +50,7 @@ const initialProducts = [
     category: "gaming",
     image:
       "https://www.alternate.de/p/o/4/0/Lenovo_Legion_5_15ARH7H__82RD001MGE___Gaming_Notebook@@1868204.jpg",
-    rating: {
-      rate: 4.7,
-      count: 500,
-    },
+    
   },
   {
     id: 3,
@@ -69,10 +61,7 @@ const initialProducts = [
     category: "gaming",
     image:
       "https://www.alternate.de/p/600x600/6/8/Lenovo_IdeaPad_Gaming_3__82SA000AGE___Gaming_Notebook@@1868186.jpg",
-    rating: {
-      rate: 2.1,
-      count: 430,
-    },
+   
   },
   {
     id: 4,
@@ -83,10 +72,7 @@ const initialProducts = [
     category: "gaming",
     image:
       "https://www.alternate.de/p/o/5/6/GIGABYTE_AORUS_15_BSF_73DE754SH__Gaming_Notebook@@1904065.jpg",
-    rating: {
-      rate: 4.6,
-      count: 400,
-    },
+    
   },
   {
     id: 5,
@@ -97,10 +83,7 @@ const initialProducts = [
     category: "business",
     image:
       "https://www.alternate.de/p/600x600/0/9/LG_gram_16Z90R_G_AD7CG__Notebook@@1906090.jpg",
-    rating: {
-      rate: 3.9,
-      count: 70,
-    },
+    
   },
   {
     id: 6,
@@ -111,10 +94,7 @@ const initialProducts = [
     category: "business",
     image:
       "https://www.alternate.de/p/o/4/4/HP_255_G9__7N0T0ES___Notebook@@1910644.jpg",
-    rating: {
-      rate: 3,
-      count: 400,
-    },
+    
   },
   {
     id: 7,
@@ -125,10 +105,7 @@ const initialProducts = [
     category: "business",
     image:
       "https://www.alternate.de/p/600x600/0/7/HP_17_cp2157ng__Notebook@@100003470.jpg",
-    rating: {
-      rate: 1.9,
-      count: 100,
-    },
+   
   },
   {
     id: 8,
@@ -139,10 +116,7 @@ const initialProducts = [
     category: "business",
     image:
       "https://www.alternate.de/p/600x600/6/0/HP_15_fc0174ng__Notebook@@1903906.jpg",
-    rating: {
-      rate: 3.3,
-      count: 203,
-    },
+    
   },
 ];
 
@@ -247,6 +221,7 @@ function App() {
             />
           }
         />
+        <Route path="dashboard" element={<ProduktDashboard initialProducts={initialProducts}/>}/>
         <Route path="*" element={<NotFound />} />
       </Route>
     )
